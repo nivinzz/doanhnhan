@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: "./",  // 👈 quan trọng
+  base: "./",
   server: {
     port: 3000,
     host: '0.0.0.0',
@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // nếu bạn có folder src
+      '@': path.resolve(__dirname, '.'), // 👈 trỏ về root luôn
     },
   },
 });
